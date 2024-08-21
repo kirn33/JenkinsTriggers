@@ -6,7 +6,6 @@ pipeline{
                         steps{
                         sh 'echo "Build completed"'
                         }
-                }
 
         post{
         always{
@@ -34,6 +33,7 @@ pipeline{
         }       
         }
      }
+        }
 }
 
 
