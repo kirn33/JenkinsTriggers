@@ -23,7 +23,7 @@ pipeline{
                     subject: subject,
                     body: body,
                     recipientProviders: [[$class: 'DevelopersRecipientProvider']],
-                    to: 'recipient@example.com'
+                    to: 'kirankumarhm33@gmail.com'
                 )
             }
         }
