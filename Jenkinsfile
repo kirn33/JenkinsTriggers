@@ -6,9 +6,7 @@ pipeline{
                         steps{
                         sh 'echo "Build completed"'
                         }
-
-                 }
-
+                }
                 post {
                     success {
                         emailext(
@@ -24,9 +22,10 @@ pipeline{
                             to: 'kirankumarhm33@gmail.com'
                                 )
                             }
+                        }
                 }
 
         }
-}
+
 
 
