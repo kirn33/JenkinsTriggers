@@ -8,10 +8,9 @@ pipeline{
                         }
                 }
 
-        post {
-        always {
-            script {
-                // Customize the email content here
+        post{
+        always{
+            script{
                 def subject = "${currentBuild.fullDisplayName} - ${currentBuild.result}"
                 def body = """
                 Build Name: ${env.JOB_NAME}
@@ -19,8 +18,7 @@ pipeline{
                 Build Status: ${currentBuild.result}
                 Build URL: ${env.BUILD_URL}
                 """
-                
-                emailext(
+                  emailext(
                     subject: Report,
                     body: body,
                     recipientProviders: [[$class: 'DevelopersRecipientProvider']],
@@ -28,14 +26,14 @@ pipeline{
                 )
             }
         }
-        success {
+        success{
             echo 'Build succeeded!'
         }
-        failure {
+        failure{
             echo 'Build failed!'
         }       
         }
-}
+     }
 }
 
 
