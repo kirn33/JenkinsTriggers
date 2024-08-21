@@ -6,7 +6,7 @@ pipeline{
                         steps{
                         sh 'echo "Build completed"'
                         }
-                }
+                
                 post {
                     success {
                         emailext(
@@ -24,6 +24,7 @@ pipeline{
                             }
                         }
                 }
+        }
 
         }
 
