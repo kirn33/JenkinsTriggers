@@ -8,7 +8,7 @@ pipeline{
                         }
                 }
 
-         post {
+        post {
         always {
             script {
                 // Customize the email content here
@@ -35,6 +35,7 @@ pipeline{
             echo 'Build failed!'
         }       
         }
+}
 }
 
 
