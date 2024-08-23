@@ -33,6 +33,8 @@ pipeline{
         failure {
             echo 'Build failed!'
                 echo 'Failed'
+                echo 'Failed'
+                
         }
     }
                 }
